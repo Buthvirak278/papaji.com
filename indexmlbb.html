@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Mobile Legend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script>
+        let selectedPrice = 0; // Variable to store the selected price
+
+        // Function to update the total price based on the selected package
+        function updateTotalPrice(price) {
+            // If the same button is clicked again, deselect it
+            if (selectedPrice === price) {
+                selectedPrice = 0; // Deselect
+            } else {
+                selectedPrice = price; // Select new price
+            }
+
+            const totalPriceElement = document.getElementById('total-price');
+            totalPriceElement.innerText = `ចំនួនទឹកប្រាក់: ${selectedPrice.toFixed(2)}$`;
+        }
+    </script>
+</head>
+<body class="bg-black text-white">
+    <div class="max-w-md mx-auto bg-black">
+        <!-- Header -->
+       <!-- Header -->
+<div class="bg-pink-500 p-4 flex items-center justify-between">
+    <div class="flex items-center">
+        <a href="index.html">
+            <i class="fas fa-home text-white text-2xl"></i>
+        </a>
+        <span class="ml-2 text-white text-lg"></span>
+    </div>
+    <i class="fas fa-headphones text-white text-2xl"></i>
+</div>
+        <!-- Main Content -->
+        <div class="p-4">
+            <div class="flex items-center">
+                <img alt="Mobile Legend logo" class="w-12 h-12" height="50" src="https://storage.googleapis.com/a1aa/image/6sZyFqhVOJj_JIsxTfk5ZfRYo0wYI0ZqSnz8tVTVChw.jpg" width="50"/>
+                <h1 class="text-2xl font-bold ml-4">MOBILE LEGEND</h1>
+            </div>
+            <div class="flex mt-4">
+                <button class="bg-pink-500 text-white py-2 px-4 rounded-full mr-2">គណនីចូល</button>
+                <button class="bg-pink-500 text-white py-2 px-4 rounded-full">បញ្ចូលកូដ</button>
+            </div>
+            <p class="mt-4 text-sm">
+                ចូលទៅកាន់ Mobile Legends: Bang Bang តាមរយៈគណនីរបស់អ្នក! ការបញ្ចូល ID របស់អ្នក, 
+                ពិនិត្យកំណត់ត្រាដែលបានធ្វើ, និងការទាញយកកំណត់ត្រាដែលបានធ្វើ។ 
+                អ្នកអាចបញ្ចូលកំណត់ត្រាដែលបានធ្វើនៅក្នុងកំណត់ត្រា MLBB របស់អ្នកបានយ៉ាងងាយស្រួល: 
+                10នាក់ ដល់ 3នាក់។
+            </p>
+            <p class="mt-2 text-sm">
+                បញ្ចូលកំណត់ត្រាដែលបានធ្វើនៅក្នុងកំណត់ត្រារបស់អ្នកបានយ៉ាងងាយស្រួល: 
+                10នាក់ ដល់ 3នាក់។
+            </p>
+        </div>
+        <!-- Form Section -->
+        <div class="bg-gray-800 p-4 rounded-lg mt-4">
+            <div class="flex items-center mb-4">
+                <span class="bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center">1</span>
+                <h2 class="text-lg font-bold ml-2">បញ្ចូលព័ត៌មានរបស់អ្នក</h2>
+            </div>
+            <div class="flex space-x-2">
+                <input class="w-1/2 p-2 rounded-lg border border-pink-500 bg-black text-white" placeholder="User  ID" type="text"/>
+                <input class="w-1/2 p-2 rounded-lg border border-pink-500 bg-black text-white" placeholder="Zone ID" type="text"/>
+            </div>
+            <button class="bg-pink-500 text-white py-2 px-4 rounded-full mt-4 w-full">ពិនិត្យគណនី</button>
+            <p class="mt-2 text-sm">
+                ដើម្បីបញ្ចូល UserID សូមចូលទៅកាន់គណនីរបស់អ្នក ហើយចុចលើរូបភាព Avatar នៅខាងឆ្វេងខាងលើ 
+                របស់អ្នក ហើយចុចលើ "Check ID" ហើយបញ្ចូល User ID និង Zone ID របស់អ្នក។ 
+                ឧទាហរណ៍: User ID: 123456789, Zone ID: 1234
+            </p>
+        </div>
+        <!-- Diamonds Section -->
+        <div class="bg-gray-800 p-4 rounded-lg mt-4">
+            <div class="flex items-center mb-4">
+                <span class="bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center">2</span>
+                <h2 class="text-lg font-bold ml-2">ជ្រើសរើសកញ្ចប់ពេជ្រ</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(0.85)">
+                    <p>55 Diamonds</p>
+                    <p class="text-yellow-400">0.85$</p>
+                </button>
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(2.30)">
+                    <p>165 Diamonds</p>
+                    <p class="text-yellow-400">2.30$</p>
+                </button>
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(3.00)">
+                    <p>220 Diamonds</p>
+                    <p class="text-yellow-400">3.00$</p>
+                </button>
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(4.00)">
+                    <p>275 Diamonds</p>
+                    <p class="text-yellow-400">4.00$</p>
+                </button>
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(7.50)">
+                    <p>550 Diamonds</p>
+                    <p class="text-yellow-400">7.50$</p>
+                </button>
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(15.00)">
+                    <p>1100 Diamonds</p>
+                    <p class="text-yellow-400">15.00$</p>
+                </button>
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(30.00)">
+                    <p>2200 Diamonds</p>
+                    <p class="text-yellow-400">30.00$</p>
+                </button>
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(45.00)">
+                    <p>3300 Diamonds</p>
+                    <p class="text-yellow-400">45.00$</p>
+                </button>
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(60.00)">
+                    <p>4400 Diamonds</p>
+                    <p class="text-yellow-400">60.00$</p>
+                </button>
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(75.00)">
+                    <p>5500 Diamonds</p>
+                    <p class="text-yellow-400">75.00$</p>
+                </button>
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(90.00)">
+                    <p>6600 Diamonds</p>
+                    <p class="text-yellow-400">90.00$</p>
+                </button>
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(105.00)">
+                    <p>7700 Diamonds</p>
+                    <p class="text-yellow-400">105.00$</p>
+                </button>
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(120.00)">
+                    <p>8800 Diamonds</p>
+                    <p class="text-yellow-400">120.00$</p>
+                </button>
+                <button class="bg-black text-white border border-pink-500 p-2 rounded-lg" onclick="updateTotalPrice(135.00)">
+                    <p>9900 Diamonds</p>
+                    <p class="text-yellow-400">135.00$</p>
+                </button>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        <div class="bg-gray-800 p-4 rounded-lg mt-4">
+            <div class="flex items-center mb-4">
+                <span class="bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center">3</span>
+                <h2 class="ml-2 text-pink-500">វិធីសាស្រ្តបង់ប្រាក់</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between p-4 border-2 border-pink-500 rounded-lg">
+                    <div class="flex items-center">
+                        <img alt="ABA logo" class="w-10 h-10 mr-4" height="50" src="https://www.mamajiika.com/_next/image?url=%2Fassets%2Fmain%2Faba-lg.webp&w=1080&q=75" width="50"/>
+                        <div>
+                            <h3 class="font-bold">ABA PAY</h3>
+                            <p class="text-sm">Scan to pay with ABA Mobile</p>
+                        </div>
+                    </div>
+                    <input class="form-radio text-pink-500" name="payment" type="radio"/>
+                </div>
+                <div class="flex items-center justify-between p-4 border-2 border-pink-500 rounded-lg">
+                    <div class="flex items-center">
+                        <img alt="KHQR logo" class="w-10 h-10 mr-4" height="50" src="https://www.mamajiika.com/_next/image?url=%2Fassets%2Fmain%2Fkhqr-lg.webp&w=1080&q=75" width="50"/>
+                        <div>
+                            <h3 class="font-bold">KHQR</h3>
+                            <p class="text-sm">Scan to pay with any banking app</p>
+                        </div>
+                    </div>
+                    <input class="form-radio text-pink-500" name="payment" type="radio"/>
+                </div>
+            </div>
+            <div class="flex justify-center mt-4">
+                <i class="fas fa-chevron-down text-pink-500"></i>
+            </div>
+            <div class="mt-4">
+                <h3 class="font-bold">TERMS &amp; CONDITION</h3>
+                <div class="flex items-center mt-2">
+                    <input checked="" class="form-checkbox text-blue-500" type="checkbox"/>
+                    <span class="ml-2">
+                        ខ្ញុំយល់ព្រមតាម
+                        <a class="text-pink-500 underline" href="#">លក្ខខណ្ឌ</a>
+                    </span>
+                </div>
+                <div class="flex items-center mt-2">
+                    <span>សរុប:</span>
+                    <span class="ml-2 text-blue-500">💎</span>
+                    <span id="total-price" class="ml-auto bg-pink-500 text-pink-200 px-2 py-1 rounded">ចំនួនទឹកប្រាក់: 0.00$</span>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-10">
+            <h3 class="font-bold">Contact Us:</h3>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="#"><i class="fab fa-facebook text-2xl"></i></a>
+                <a href="#"><i class="fab fa-telegram text-2xl"></i></a>
+                <a href="#"><i class="fab fa-tiktok text-2xl"></i></a>
+            </div>
+            <h3 class="font-bold mt-4">Accept Payment:</h3>
+            <img alt="KHQR logo" class="mx-auto mt-2" height="50" src="https://storage.googleapis.com/a1aa/image/EYQup71dfVJUIHZRqosFCHMcKKwDFUKltsjDylweHg4.jpg" width="100"/>
+        </div>
+        <div class="text-center mt-4">
+            <a class="text-white underline" href="#">Privacy Policy</a> |
+            <a class="text-white underline" href="#">Terms and Condition</a>
+        </div>
+    </div>
+</body>
+</html>
